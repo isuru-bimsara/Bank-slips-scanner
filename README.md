@@ -29,7 +29,7 @@ Backend service for uploading bank slip images/PDFs, extracting details with OCR
 2. Create a `.env` file in `backend/`:
 
    ```env
-   MONGO_URI=your_mongodb_connection_string
+   MONGO_URI=mongodb://localhost:27017/bank_slips
    PORT=5000
    ```
 
@@ -66,7 +66,7 @@ curl -o slips.xlsx http://localhost:5000/api/slip/export
 
 The backend extracts:
 
-- **Account Number**: first 6–16 digit number found
+- **Account Number**: first 6-16 digit number found
 - **Amount**: matches `LKR 1,234.56` format
 - **Date**: matches `DD/MM/YYYY` or `YYYY-MM-DD` formats
 
